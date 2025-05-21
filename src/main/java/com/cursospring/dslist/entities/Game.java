@@ -83,7 +83,7 @@ public class Game {
 		return platforms;
 	}
 
-	public void setPlatform(String platforms) {
+	public void setPlatforms(String platforms) {
 		this.platforms = platforms;
 	}
 
