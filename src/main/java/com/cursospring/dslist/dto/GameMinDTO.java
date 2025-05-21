@@ -1,6 +1,7 @@
 package com.cursospring.dslist.dto;
 
 import com.cursospring.dslist.entities.Game;
+import com.cursospring.dslist.projections.GameMinProjection;
 
 // ESSE ARQUIVO DTO É RESPONSÁVEL PELAS INFORMAÇÕES, TIPO AQUI VOCÊ DEFINE O QUE IRÁ APARECER NO FRONT-END
 public class GameMinDTO {
@@ -22,6 +23,13 @@ public class GameMinDTO {
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescription();
 	}
+	public GameMinDTO(GameMinProjection projection) {
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
+		}
 	public Long getId() {
 		return id;
 	}
